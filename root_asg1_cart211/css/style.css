@@ -42,7 +42,7 @@ nav {
     background-color: #333;
 }
 
-a:link {
+nav a:link {
     display: inline-block;
     background-color: #333;
     color: #fff;
@@ -52,11 +52,11 @@ a:link {
     text-transform: capitalize;
 }
 
-a:visited {
+nav a:visited {
     color: #979aa0;
 }
 
-a:hover {
+nav a:hover {
     color: #333;
     background-color: #fff;
 }
@@ -129,8 +129,27 @@ h5 {
     text-transform: uppercase;
 }
 
-article.exercise {
+.exercise {
     text-align: center;
+}
+
+article a:link {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+article a:visited {
+    color: #979aa0;
+}
+
+article a:hover {
+    color: #333;
+    background-color: #fff;
 }
 
 /* === FOOTER INFO HERE === */
