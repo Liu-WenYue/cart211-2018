@@ -1,0 +1,138 @@
+/* CCS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: monospace, sans-serif, "Open Sans";
+}
+
+header {
+    margin: 40px;
+}
+
+nav {
+    margin-bottom: 40px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 17%;
+}
+
+.text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 60%;
+    background-color: #f7f8f9;
+}
+
+/* === NAV INFO HERE === */
+nav {
+    text-align: center;
+    background-color: #333;
+}
+
+a:link {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+a:visited {
+    color: #979aa0;
+}
+
+a:hover {
+    color: #333;
+    background-color: #fff;
+}
+
+/* === HEADER INFO HERE === */
+header {
+    padding: 0 20px;
+}
+
+header h1 {
+    font-family: monospace, "sans-serif", serif;
+    font-size: 52px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #333;
+}
+
+header h2 {
+    font-family: monospace, "sans-serif", serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #333;
+}
+
+/* === ARTICLE INFO HERE === */
+article {
+    padding: 0 20px;
+    font-family: monospace, Georgia, serif;
+}
+
+article h2 {
+    font-family: monospace, "sans-serif", serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+article h3 {
+    font-family: monospace, "sans-serif", serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+article p {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+article h4 {
+    padding: 0 160px;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+p.readings {
+    font-size: 20px;
+    line-height: 38px;
+    text-align: justify;
+    padding: 0 160px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+article h5 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* === FOOTER INFO HERE === */
+footer {
+    margin-top: 40px;
+    font-style: italic;
+    font-family: Georgia, serif;
+    text-align: center;
+}
