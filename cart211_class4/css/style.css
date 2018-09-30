@@ -1,0 +1,16 @@
+/* CCS Document */
+
+section {
+    background-color: #333;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.rel {
+    background-color: tomato;
+}
+
+#parent {
+    background-color: beige;
+}
