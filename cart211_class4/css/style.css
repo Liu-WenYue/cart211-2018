@@ -5,15 +5,26 @@ section {
     width: 100px;
     height: 100px;
     margin: 20px;
+    /*display: inline-block;*/
 }
 
 .rel {
     background-color: tomato;
     position: relative;
-    left: 50px;
-    
+    left: 150px;
+    /*top: 50px;*/
 }
 
 #parent {
     background-color: beige;
+    width: 50%;
+    position: relative;
+}
+
+#abso {
+    background-color: crimson;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
 }
