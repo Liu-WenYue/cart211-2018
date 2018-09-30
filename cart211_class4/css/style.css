@@ -9,6 +9,9 @@ section {
 
 .rel {
     background-color: tomato;
+    position: relative;
+    left: 50px;
+    
 }
 
 #parent {
