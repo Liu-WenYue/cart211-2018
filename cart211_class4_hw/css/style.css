@@ -1,0 +1,97 @@
+/* === CCS Document === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+html, body {
+  height: 100%; /*do this to support height values in percentage.*/
+}
+
+#s1 {
+  background: url(../images/s1_bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#s1 h1 {
+  width: 400px;
+  background-color: #ece2e0;
+  color: #333;
+  text-transform: uppercase;
+  padding: 20px;
+  position: absolute;
+  bottom: 200px;
+  right: 20px;
+}
+
+#s1 p {
+  width: 400px;
+  background-color: #ece2e0;
+  color: #333;
+  padding: 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+#s2 {
+  background: url(../images/s2_bg.jpg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#s2 h1 {
+  width: 400px;
+  background-color: #f5f2eb;
+  color: #333;
+  text-transform: uppercase;
+  padding: 20px;
+  position: absolute;
+  bottom: 200px;
+  left: 20px;
+}
+
+#s2 p {
+  width: 400px;
+  background-color: #f5f2eb;
+  color: #333;
+  padding: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+#s3 {
+  background: url(../images/s3_bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#s3 h1 {
+  width: 400px;
+  background-color: #dadadb;
+  color: #333;
+  text-transform: uppercase;
+  padding: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#s3 p {
+  width: 400px;
+  background-color: #dadadb;
+  color: #333;
+  padding: 20px;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+}
