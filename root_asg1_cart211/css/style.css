@@ -109,16 +109,16 @@ article p {
 }
 
 article h4 {
-    padding: 0 160px;
+    padding: 0 220px;
     font-size: 28px;
     text-transform: uppercase;
 }
 
 p.readings {
     font-size: 20px;
-    line-height: 38px;
+    line-height: 44px;
     text-align: justify;
-    padding: 0 160px;
+    padding: 0 220px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
