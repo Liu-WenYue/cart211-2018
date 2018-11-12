@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>video example</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<nav>
+		<a href="#" class="hvr-bounce-to-right">home</a>
+		<a href="#" class="hvr-bounce-to-right">about</a>
+		<a href="#" class="hvr-bounce-to-right">portfolio</a>
+		<a href="#" class="hvr-bounce-to-right">contact</a>
+	</nav>
+
+	<video autoplay loop muted poster="images/water.jpg" id="water">
+		<source src="video/water.mp4" type="video/mp4">
+	</video>
+
+	<section id="first">
+		<article class="content">
+			<h1>Header</h1>
+			<p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.
+			Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur.</p>
+			<button id="myBtn" onclick="myFunction()">Pause</button>
+		</article>
+	</section>
+
+	<section id="second">
+		<figure id="f1">
+			<h1>figure1</h1>
+			<figcaption>description of fig1</figcaption>
+		</figure>
+
+		<figure id="f2">
+			<h1>figure2</h1>
+			<figcaption>description of fig2</figcaption>
+		</figure>
+
+		<figure id="f3">
+			<h1>figure3</h1>
+			<figcaption>description of fig3</figcaption>
+		</figure>
+
+		<figure id="f4">
+			<h1>figure4</h1>
+			<figcaption>description of fig4</figcaption>
+		</figure>
+	</section>
+
+	<div id="anim"></div>
+
+	<article id="display_me">
+		<h1>javascript</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<span id="close" onclick="hideFunction()">X</span>
+	</article>
+
+	<button id="trigger" onclick="showFunction()">show something</button>
+
+	<script>
+		var video = document.getElementById("water");
+		var btn = document.getElementById("myBtn");
+
+		function myFunction(){
+			if(video.paused){
+				 video.play();
+    			 btn.innerHTML = "Pause";
+			}
+			else {
+    			video.pause();
+    			btn.innerHTML = "Play";
+  		}
+		}
+
+		function showFunction() {
+			document.getElementById("display_me").style.opacity = 1;
+		}
+
+		function hideFunction() {
+			document.getElementById("display_me").style.opacity = 0;
+		}
+	</script>
+
+</body>
+</html>
