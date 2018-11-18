@@ -10,7 +10,7 @@ html, body {
 	height: 100%;
 }
 
-#water {
+#snow {
   position: fixed;
 	top:50%;
 	left:50%;
@@ -39,7 +39,7 @@ html, body {
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 	font-size: 72px;
 	position: relative;
-	animation: fadeIn 1s;
+	animation: fadeIn .5s;
 }
 
 @keyframes fadeIn {
@@ -88,13 +88,13 @@ figure {
 	width: 300px;
 	text-align: center;
 	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-	transition: all .3s;
+	transition: all .5s;
 	position: relative;
 }
 
 figure:hover {
 	/* background: cadetblue; */
-	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.75);
 }
 
 #f1 {
@@ -103,7 +103,7 @@ figure:hover {
 }
 
 #f1:hover {
-	background: url(../images/bg1.jpg) no-repeat center right;
+	background: url(../images/bg1.jpg) no-repeat center bottom;
 	background-size: cover;
 }
 
@@ -123,7 +123,7 @@ figure:hover {
 }
 
 #f3:hover {
-	background: url(../images/bg3.jpg) no-repeat center right;
+	background: url(../images/bg3.jpg) no-repeat center top;
 	background-size: cover;
 }
 
@@ -154,19 +154,22 @@ figure:hover h1 {
 }
 
 figure figcaption {
+	border-radius: 15px;
+	height: 400px;
+	width: 300px;
 	font-family: Georgia, "serif";
 	font-style: italic;
 	background: rgba(0, 0, 0, 0.75);
 	color: #fff;
 	padding: 20px;
 	position: absolute;
-	bottom: -100px;
+	opacity: 0;
 	width: 100%;
-	transition: all .5s .3s;
+	transition: all .5s;
 }
 
 figure:hover figcaption {
-	bottom: 0px;
+	opacity: 1;
 }
 
 /* === NAV TRANSITION EXAMPLE === */
@@ -217,9 +220,9 @@ nav a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: crimson;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
+  background: tomato;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
   -webkit-transform-origin: 0 50%;
   transform-origin: 0 50%;
   -webkit-transition-property: transform;
@@ -235,8 +238,8 @@ nav a:hover {
 }
 
 .hvr-bounce-to-right:hover:before, .hvr-bounce-to-right:focus:before, .hvr-bounce-to-right:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
   -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
@@ -276,7 +279,7 @@ nav a:hover {
 	color: #333;
 	position: absolute;
 	top: 100px;
-	left: 100px;
+	left: 50px;
 	opacity: 0;
 	transition: all .5s;
 	z-index: 101;
@@ -292,7 +295,6 @@ nav a:hover {
 	top: 0px;
 	right: 0px;
 	cursor: pointer;
-	/* border: 2px solid #333; */
 }
 
 #close:hover {
