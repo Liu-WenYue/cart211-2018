@@ -1,4 +1,5 @@
 /* CCS Document */
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch:600');
 
 * {
 	margin: 0;
@@ -23,12 +24,11 @@ html, body {
 }
 
 figure {
-	border-radius: 90%;
+	border-radius: 50%;
 	height: 140px;
 	width: 140px;
 	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 	transition: all .3s;
-	position: relative;
 }
 
 figure:hover {
@@ -117,4 +117,20 @@ figure:hover {
 	width: 180px;
 	background: url(../images/fig7_hover.png) no-repeat center center;
 	background-size: 180px;
+}
+
+#meme {
+	width: 230px;
+	height: 300px;
+	border-radius: 0;
+	background: url(../images/meme.png) no-repeat center center;
+	background-size: contain;
+}
+
+h1 {
+	bottom: 80px;
+	font-family: 'Chakra Petch', sans-serif;
+	font-size: 30px;
+	font-weight: 600;
+	position: absolute;
 }
