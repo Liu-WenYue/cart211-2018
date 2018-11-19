@@ -23,9 +23,9 @@ html, body {
 }
 
 figure {
-	border-radius: 50%;
-	height: 110px;
-	width: 110px;
+	border-radius: 90%;
+	height: 140px;
+	width: 140px;
 	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 	transition: all .3s;
 	position: relative;
@@ -36,41 +36,85 @@ figure:hover {
 }
 
 #f1 {
-	background: url(../images/bg1.jpg) no-repeat center center;
+	background: url(../images/fig1.png) no-repeat center center;
 	background-size: cover;
 }
 
 #f1:hover {
-	background: url(../images/bg1.jpg) no-repeat center right;
-	background-size: cover;
+	height: 180px;
+	width: 180px;
+	background: url(../images/fig1_hover.png) no-repeat center center;
+	background-size: 180px;
 }
 
 #f2 {
-	background: url(../images/bg2.jpg) no-repeat center center;
+	background: url(../images/fig2.png) no-repeat center center;
 	background-size: cover;
 }
 
 #f2:hover {
-	background: url(../images/bg2.jpg) no-repeat center right;
-	background-size: cover;
+	height: 180px;
+	width: 180px;
+	background: url(../images/fig2_hover.png) no-repeat center center;
+	background-size: 180px;
 }
 
 #f3 {
-	background: url(../images/bg3.jpg) no-repeat center center;
+	background: url(../images/fig3.png) no-repeat center center;
 	background-size: cover;
 }
 
 #f3:hover {
-	background: url(../images/bg3.jpg) no-repeat center right;
-	background-size: cover;
+	height: 180px;
+	width: 180px;
+	background: url(../images/fig3_hover.png) no-repeat center center;
+	background-size: 180px;
 }
 
 #f4 {
-	background: url(../images/bg4.jpg) no-repeat center center;
+	background: url(../images/fig4.png) no-repeat center center;
 	background-size: cover;
 }
 
 #f4:hover {
-	background: url(../images/bg4.jpg) no-repeat center right;
+	height: 180px;
+	width: 180px;
+	background: url(../images/fig4_hover.png) no-repeat center center;
+	background-size: 180px;
+}
+
+#f5 {
+	background: url(../images/fig5.png) no-repeat center center;
 	background-size: cover;
+}
+
+#f5:hover {
+	height: 180px;
+	width: 180px;
+	background: url(../images/fig5_hover.png) no-repeat center center;
+	background-size: 180px;
+}
+
+#f6 {
+	background: url(../images/fig6.png) no-repeat center center;
+	background-size: cover;
+}
+
+#f6:hover {
+	height: 180px;
+	width: 180px;
+	background: url(../images/fig6_hover.png) no-repeat center center;
+	background-size: 180px;
+}
+
+#f7 {
+	background: url(../images/fig7.png) no-repeat center center;
+	background-size: cover;
+}
+
+#f7:hover {
+	height: 180px;
+	width: 180px;
+	background: url(../images/fig7_hover.png) no-repeat center center;
+	background-size: 180px;
 }
