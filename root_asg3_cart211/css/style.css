@@ -29,6 +29,7 @@ figure {
 	width: 140px;
 	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 	transition: all .3s;
+	position: relative;
 }
 
 figure:hover {
@@ -38,6 +39,8 @@ figure:hover {
 #f1 {
 	background: url(../images/fig1.png) no-repeat center center;
 	background-size: cover;
+	top: 180px;
+	left: 110px;
 }
 
 #f1:hover {
@@ -50,6 +53,7 @@ figure:hover {
 #f2 {
 	background: url(../images/fig2.png) no-repeat center center;
 	background-size: cover;
+	left: 80px;
 }
 
 #f2:hover {
@@ -62,6 +66,8 @@ figure:hover {
 #f3 {
 	background: url(../images/fig3.png) no-repeat center center;
 	background-size: cover;
+	top: -240px;
+	left: -140px;
 }
 
 #f3:hover {
@@ -74,6 +80,8 @@ figure:hover {
 #f4 {
 	background: url(../images/fig4.png) no-repeat center center;
 	background-size: cover;
+	top: -180px;
+	left: 120px;
 }
 
 #f4:hover {
@@ -86,6 +94,8 @@ figure:hover {
 #f5 {
 	background: url(../images/fig5.png) no-repeat center center;
 	background-size: cover;
+	top: -20px;
+	left: 120px;
 }
 
 #f5:hover {
@@ -98,6 +108,8 @@ figure:hover {
 #f6 {
 	background: url(../images/fig6.png) no-repeat center center;
 	background-size: cover;
+	top: 170px;
+	left: -210px;
 }
 
 #f6:hover {
@@ -107,24 +119,17 @@ figure:hover {
 	background-size: 180px;
 }
 
-#f7 {
-	background: url(../images/fig7.png) no-repeat center center;
-	background-size: cover;
-}
-
-#f7:hover {
-	height: 180px;
-	width: 180px;
-	background: url(../images/fig7_hover.png) no-repeat center center;
-	background-size: 180px;
-}
-
 #meme {
 	width: 230px;
 	height: 300px;
 	border-radius: 0;
-	background: url(../images/meme.png) no-repeat center center;
-	background-size: contain;
+	z-index: 100;
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0);
+	/* position: fixed; */
+}
+
+#meme:hover {
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
