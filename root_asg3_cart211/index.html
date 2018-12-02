@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>memes</title>
+	<title>How to use memes properly</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -26,6 +26,8 @@
 		<figure id="d3"></figure>
 		<figure id="memed"></figure>
 		<figure id="d4"></figure>
+		<figure id="text1"></figure>
+		<span id="close" onclick="hideFunction()"></span>
 	</div>
 
 	<script>
@@ -43,6 +45,17 @@
 		    // ev.target.appendChild(document.getElementById(data));
 				document.getElementById("meme").style.opacity = "0";
 		   	document.getElementById("chat").style.display = "block";
+				document.getElementById("f1").style.width = "180px";
+				document.getElementById("f1").style.background = "url(../images/fig1_hover.png) no-repeat center center";
+				document.getElementById("f1").style.backgroundSize = "180px";
+		}
+
+		function hideFunction() {
+			document.getElementById("meme").style.opacity = "1";
+			document.getElementById("chat").style.display = "none";
+			document.getElementById("f1").style.width = "110px";
+			document.getElementById("f1").style.background = "url(../images/fig1.png) no-repeat center center";
+			document.getElementById("f1").style.backgroundSize = "cover";
 		}
 
 		function dropPhone(ev) {

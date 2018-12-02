@@ -1,5 +1,7 @@
 /* CCS Document */
 @import url('https://fonts.googleapis.com/css?family=Chakra+Petch:600');
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab:300');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
 
 * {
 	margin: 0;
@@ -142,6 +144,8 @@ h1 {
 .chatmain {
 	position: relative;
 	border-radius: 0;
+	overflow: hidden;
+	transform-origin: bottom center;
 }
 
 #chat {
@@ -153,7 +157,6 @@ h1 {
 	left: 530px;
 	position: absolute;
 	z-index: 2;
-	overflow: hidden;
 	display: none;
 	/* transform-origin: bottom left; */
 	animation: appear .6s linear;
@@ -234,5 +237,30 @@ h1 {
 	100% {top: 290px;}
 }
 
+#text1 {
+	height: 500px;
+	width: 380px;
+	background: url(../images/chat/text.png) no-repeat center center;
+	background-size: contain;
+	position: absolute;
+	top: 70px;
+	left: 530px;
+	display: none;
+	animation: dropdown 1.5s .5s linear;
+}
+
+@keyframes dropdown {
+	from {top: -570px; left: 530px;}
+	to {top: 70px; left: 530px;}
+}
+
+#close {
+	background: url(../images/chat/close.png) no-repeat center center;
+	background-size: contain;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	cursor: pointer;
+}
 
 /* === PHONE HERE === */
