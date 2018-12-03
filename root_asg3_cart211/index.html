@@ -10,24 +10,58 @@
 	<section id="first">
 		<figure id="f1" ondrop="dropChat(event)" ondragover="allowDrop(event)" ></figure>
 		<figure id="f2" ondrop="dropPhone(event)" ondragover="allowDrop(event)"></figure>
-		<figure id="f3" ondrop="drop(event)" ondragover="allowDrop(event)"></figure>
+		<figure id="f3" ondrop="dropVideo(event)" ondragover="allowDrop(event)"></figure>
 		<div id="meme" ondrop="drop(event)" ondragover="allowDrop(event)">
 			<img src="images/meme.png" draggable="true" ondragstart="drag(event)" id="drag1" width="230" height="300">
 		</div>
-		<figure id="f4" ondrop="drop(event)" ondragover="allowDrop(event)"></figure>
+		<figure id="f4" ondrop="dropSocialmedia(event)" ondragover="allowDrop(event)"></figure>
 		<figure id="f5" ondrop="drop(event)" ondragover="allowDrop(event)"></figure>
-		<figure id="f6" ondrop="drop(event)" ondragover="allowDrop(event)"></figure>
+		<figure id="f6" ondrop="dropSell(event)" ondragover="allowDrop(event)"></figure>
 		<h1>Drag the meme onto any of the icons</h1>
 	</section>
 
 	<div id="chat" class="chatmain">
-		<figure id="d1"></figure>
+		<!-- <figure id="d1"></figure>
 		<figure id="d2"></figure>
 		<figure id="d3"></figure>
 		<figure id="memed"></figure>
-		<figure id="d4"></figure>
+		<figure id="d4"></figure> -->
 		<figure id="text1"></figure>
-		<span id="close" onclick="hideFunction()"></span>
+		<span id="close" onclick="hideChatFunction()"></span>
+	</div>
+
+	<div id="phone" class="phonemain">
+		<figure id="memep"></figure>
+		<figure id="text2"></figure>
+		<span id="close" onclick="hidePhoneFunction()"></span>
+	</div>
+
+	<div id="video" class="videomain">
+		<figure id="memetext"></figure>
+		<figure id="play"></figure>
+		<figure id="pause"></figure>
+		<figure id="text3"></figure>
+		<span id="close" onclick="hideVideoFunction()"></span>
+	</div>
+
+	<div id="socialmedia" class="socialmediamain">
+		<figure id="comment"></figure>
+		<figure id="like1"></figure>
+		<figure id="like2"></figure>
+		<figure id="like3"></figure>
+		<figure id="text4"></figure>
+		<span id="close" onclick="hideSocialMediaFunction()"></span>
+	</div>
+
+
+
+	<div id="sell" class="sellmain">
+		<figure id="memeshirt"></figure>
+		<figure id="bigsale"></figure>
+		<figure id="price"></figure>
+		<figure id="purchase"></figure>
+		<figure id="text5"></figure>
+		<span id="close" onclick="hideSellFunction()"></span>
 	</div>
 
 	<script>
@@ -48,9 +82,10 @@
 				document.getElementById("f1").style.width = "180px";
 				document.getElementById("f1").style.background = "url(../images/fig1_hover.png) no-repeat center center";
 				document.getElementById("f1").style.backgroundSize = "180px";
+				// docuemnt.getElementById("chat").style.transformOrigin = "bottom left";
 		}
 
-		function hideFunction() {
+		function hideChatFunction() {
 			document.getElementById("meme").style.opacity = "1";
 			document.getElementById("chat").style.display = "none";
 			document.getElementById("f1").style.width = "110px";
@@ -59,6 +94,81 @@
 		}
 
 		function dropPhone(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			// ev.target.appendChild(document.getElementById(data));
+			document.getElementById("meme").style.opacity = "0";
+			document.getElementById("phone").style.display = "block";
+			document.getElementById("f2").style.width = "180px";
+			document.getElementById("f2").style.background = "url(../images/fig2_hover.png) no-repeat center center";
+			document.getElementById("f2").style.backgroundSize = "180px";
+		}
+
+		function hidePhoneFunction() {
+			document.getElementById("meme").style.opacity = "1";
+			document.getElementById("phone").style.display = "none";
+			document.getElementById("f2").style.width = "110px";
+			document.getElementById("f2").style.background = "url(../images/fig2.png) no-repeat center center";
+			document.getElementById("f2").style.backgroundSize = "cover";
+		}
+
+		function dropVideo(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			// ev.target.appendChild(document.getElementById(data));
+			document.getElementById("meme").style.opacity = "0";
+			document.getElementById("video").style.display = "block";
+			document.getElementById("f3").style.width = "180px";
+			document.getElementById("f3").style.background = "url(../images/fig3_hover.png) no-repeat center center";
+			document.getElementById("f3").style.backgroundSize = "180px";
+		}
+
+		function hideVideoFunction() {
+			document.getElementById("meme").style.opacity = "1";
+			document.getElementById("video").style.display = "none";
+			document.getElementById("f3").style.width = "110px";
+			document.getElementById("f3").style.background = "url(../images/fig3.png) no-repeat center center";
+			document.getElementById("f3").style.backgroundSize = "cover";
+		}
+
+		function dropSocialmedia(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			// ev.target.appendChild(document.getElementById(data));
+			document.getElementById("meme").style.opacity = "0";
+			document.getElementById("socialmedia").style.display = "block";
+			document.getElementById("f4").style.width = "180px";
+			document.getElementById("f4").style.background = "url(../images/fig4_hover.png) no-repeat center center";
+			document.getElementById("f4").style.backgroundSize = "180px";
+		}
+
+		function hideSocialMediaFunction() {
+			document.getElementById("meme").style.opacity = "1";
+			document.getElementById("socialmedia").style.display = "none";
+			document.getElementById("f4").style.width = "110px";
+			document.getElementById("f4").style.background = "url(../images/fig4.png) no-repeat center center";
+			document.getElementById("f4").style.backgroundSize = "cover";
+		}
+
+
+
+		function dropSell(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			// ev.target.appendChild(document.getElementById(data));
+			document.getElementById("meme").style.opacity = "0";
+			document.getElementById("sell").style.display = "block";
+			document.getElementById("f6").style.width = "180px";
+			document.getElementById("f6").style.background = "url(../images/fig6_hover.png) no-repeat center center";
+			document.getElementById("f6").style.backgroundSize = "180px";
+    }
+
+		function hideSellFunction() {
+			document.getElementById("meme").style.opacity = "1";
+			document.getElementById("sell").style.display = "none";
+			document.getElementById("f6").style.width = "110px";
+			document.getElementById("f6").style.background = "url(../images/fig6.png) no-repeat center center";
+			document.getElementById("f6").style.backgroundSize = "cover";
 		}
 
 	</script>
