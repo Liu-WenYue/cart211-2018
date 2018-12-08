@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Chakra+Petch:600');
 
 * {
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	box-sizing: border-box;
 }
@@ -10,6 +10,187 @@
 html, body {
 	height: 100%;
 }
+
+/* === LOGO HERE === */
+#logo {
+	z-index: 100;
+	height: 60px;
+	width: 60px;
+	left: 20px;
+	top: 20px;
+	position: absolute;
+	transform-origin: center center;
+	animation: growup 1s ease-out;
+}
+
+@keyframes growup {
+	0% {transform: scale(0,0); opacity: 0;}
+	90% {transform: scale(1.1,1.1); opacity: 1;}
+	100% {transform: scale(1,1);}
+}
+
+
+/* === HAMBURGER BUTTON HERE === */
+
+/* Hamburger button styles. */
+#hamburger-button {
+	position: absolute;
+	transition: .3s ease-in-out;
+	width: 45px;
+	height: 34px;
+	display: block;
+	top: 2rem;
+	right: 2rem;
+	z-index: 100;
+}
+
+	#hamburger-button span {
+		position: absolute;
+		height: 8px;
+		border-radius: 4px;
+		width: 100%;
+		background-color: #fff;
+		top: 0;
+		transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+	}
+
+		#hamburger-button span:nth-child(1) {
+			top: 0px;
+		}
+
+		#hamburger-button span:nth-child(2),
+		#hamburger-button span:nth-child(3) {
+			top: 13px;
+		}
+
+		#hamburger-button span:nth-child(4) {
+			top: 26px;
+		}
+
+	#hamburger-button.active span {
+		background-color: ##3D4146;
+	}
+
+		#hamburger-button.active span:nth-child(1),
+		#hamburger-button.active span:nth-child(4) {
+			opacity: 0;
+		}
+
+		#hamburger-button.active span:nth-child(2) {
+			transform: rotate(45deg);
+		}
+
+		#hamburger-button.active span:nth-child(3) {
+			transform: rotate(-45deg);
+		}
+
+/* 1. Style the overlay & navigation. */
+#overlay {
+	position: fixed;
+	background: #7BA9C3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .3s, visibility .3s, height .3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+}
+
+nav {
+	font-size: 2rem;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+	nav ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+		nav ul li {
+			opacity: 0;
+			margin: 1rem 0;
+		}
+
+			nav ul li a {
+				color: #FFF;
+				text-decoration: none;
+				transition: opacity .2s ease;
+				opacity: .75;
+			}
+
+				nav ul li a:hover {
+					opacity: 1;
+				}
+
+/* 2. Add the animation. */
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translate3d(-25%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+/* 3. Style the visible overlay. */
+#overlay.visible {
+	opacity: .85;
+	visibility: visible;
+	height: 100%;
+}
+
+	#overlay.visible li {
+		animation: fadeInLeft .3s ease forwards;
+	}
+
+		#overlay.visible li:nth-of-type(1) {
+			animation-delay: 0.23s;
+		}
+
+		#overlay.visible li:nth-of-type(2) {
+			animation-delay: 0.26s;
+		}
+
+		#overlay.visible li:nth-of-type(3) {
+			animation-delay: 0.29s;
+		}
+
+		#overlay.visible li:nth-of-type(4) {
+			animation-delay: 0.32s;
+		}
+
+		#overlay.visible li:nth-of-type(5) {
+			animation-delay: 0.35s;
+		}
+
+/* === BACKGROUND HERE ===*/
+/* Header */
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+/* #large-header {
+	background: url(../images/bg.png) no-repeat fixed center center;
+	background-size: cover;
+	width:100%;
+	min-height: 100%;
+} */
+
 
 /* === ICONS HERE === */
 #first {
@@ -41,7 +222,7 @@ section figure:hover {
 	background: url(../images/fig1.png) no-repeat center center;
 	background-size: cover;
 	top: 180px;
-	left: 110px;
+	left: 80px;
 }
 
 #f1:hover {
@@ -54,7 +235,7 @@ section figure:hover {
 #f2 {
 	background: url(../images/fig2.png) no-repeat center center;
 	background-size: cover;
-	left: 80px;
+	left: 60px;
 }
 
 #f2:hover {
@@ -68,7 +249,7 @@ section figure:hover {
 	background: url(../images/fig3.png) no-repeat center center;
 	background-size: cover;
 	top: -240px;
-	left: -140px;
+	left: -180px;
 }
 
 #f3:hover {
@@ -82,7 +263,7 @@ section figure:hover {
 	background: url(../images/fig4.png) no-repeat center center;
 	background-size: cover;
 	top: -180px;
-	left: 120px;
+	left: 95px;
 }
 
 #f4:hover {
@@ -96,7 +277,7 @@ section figure:hover {
 	background: url(../images/fig5.png) no-repeat center center;
 	background-size: cover;
 	top: -20px;
-	left: 120px;
+	left: 60px;
 }
 
 #f5:hover {
@@ -109,8 +290,8 @@ section figure:hover {
 #f6 {
 	background: url(../images/fig6.png) no-repeat center center;
 	background-size: cover;
-	top: 170px;
-	left: -210px;
+	top: 190px;
+	left: -240px;
 }
 
 #f6:hover {
@@ -123,8 +304,10 @@ section figure:hover {
 #meme {
 	width: 230px;
 	height: 300px;
+	left: 50%;
+	transform: translateX(-20px);
 	border-radius: 0;
-	z-index: 1;
+	z-index: 2;
 }
 
 h1 {
@@ -141,8 +324,6 @@ h1 {
 .chatmain {
 	border-radius: 0;
 	overflow: hidden;
-	width: 380px;
-	margin: 0 auto;
 	position: relative;
 }
 
@@ -152,15 +333,15 @@ h1 {
 	background: url(../images/chat/bg.png) no-repeat center center;
 	background-size: contain;
 	top: 70px;
-	left: 530px;
+	left: 36.8%;
 	position: absolute;
 	z-index: 2;
 	display: none;
 	transform-origin: bottom left;
-	animation: appear .5s linear;
+	animation: appearchat .5s linear;
 }
 
-@keyframes appear {
+@keyframes appearchat {
 	from {transform: scale(0,0);}
 	to {transform: scale(1,1);}
 }
@@ -240,9 +421,9 @@ h1 {
 	background: url(../images/chat/text.png) no-repeat center center;
 	background-size: contain;
 	position: absolute;
-	z-index: 3;
+	z-index: 2;
 	top: 70px;
-	left: 530px;
+	left: 36.8%;
 	display: none;
 	transform-origin: bottom left;
 	animation: fadein_text1 2s ease-out;
@@ -262,7 +443,8 @@ h1 {
 	z-index: 3;
 	position: absolute;
 	top: 90px;
-	right: 570px;
+	left: 36.8%;
+	transform: translateX(315px);
 	display: none;
 	cursor: pointer;
 	animation: fadein_text1 2s ease-out;
@@ -282,17 +464,17 @@ h1 {
 	background: url(../images/phone/bg.png) no-repeat center center;
 	background-size: contain;
 	top: 70px;
-	left: 530px;
-	position: absolute;
+	left: 36.8%;
 	z-index: 2;
 	display: none;
-	animation: appear2 .8s linear;
+	position: absolute;
+	transform-origin: left center;
+	animation: appearphone .8s ease-out;
 }
 
-@keyframes appear2 {
-	0% {height: 0; width: 0;}
-	50% {height: 250px; width: 190px;}
-	100% {height: 500px; width: 380px;}
+@keyframes appearphone {
+	from {transform: scale(0,0);}
+	to {transform: scale(1,1);}
 }
 
 #memep {
@@ -303,29 +485,47 @@ h1 {
 	position: absolute;
 	top: 195px;
 	left: 100px;
-	animation: fadein .8s .2s ease-out;
+	animation: fadeinmemep 1.5s ease-out;
 }
 
-@keyframes fadein {
-	from {top: 455px; opacity: 0;}
-	to {top: 195px; opacity: 1;}
+@keyframes fadeinmemep {
+	0% {top: 455px; opacity: 0;}
+	50% {top: 455px; opacity: 0;}
+	100% {top: 195px; opacity: 1;}
 }
 
 #text2 {
-	height: 210px;
-	width: 180px;
+	height: 500px;
+	width: 380px;
 	background: url(../images/phone/text.png) no-repeat center center;
 	background-size: contain;
 	position: absolute;
-	z-index: 100;
+	z-index: 3;
 	top: 70px;
-	left: 530px;
-	animation: dropdown 1.5s .5s linear;
+	left: 36.8%;
+	display: none;
+	animation: fadein_text2 3.2s ease-out;
 }
 
-@keyframes dropdown {
-	from {top: -570px; left: 530px;}
-	to {top: 70px; left: 530px;}
+@keyframes fadein_text2 {
+	0% {opacity: 0; z-index: 1;}
+	50% {opacity: 0; z-index: 3;}
+	100% {opacity: 1; z-index: 3;}
+}
+
+#closephone {
+	height: 25px;
+	width: 25px;
+	background: url(../images/chat/close.png) no-repeat center center;
+	background-size: contain;
+	z-index: 3;
+	position: absolute;
+	top: 90px;
+	left: 36.8%;
+	transform: translateX(270px);
+	display: none;
+	cursor: pointer;
+	animation: fadein_text2 3.2s ease-out;
 }
 
 
@@ -342,37 +542,51 @@ h1 {
 	background: url(../images/video/bg.png) no-repeat center center;
 	background-size: contain;
 	top: 70px;
-	left: 510px;
+	left: 35.4%;
 	position: absolute;
 	z-index: 2;
 	display: none;
-	animation: appear3 .5s linear;
+	transform-origin: left top;
+	animation: appearvideo .8s ease-out;
 }
 
-@keyframes appear3 {
-	0% {height: 0; width: 0;}
-	50% {height: 250px; width: 215px;}
-	100% {height: 500px; width: 430px;}
+@keyframes appearvideo {
+	from {transform: scale(0,0);}
+	to {transform: scale(1,1);}
 }
 
 #memetext {
-	height: 380px;
+	height: 200px;
 	width: 350px;
 	background: url(../images/video/memetext.png) no-repeat center center;
 	background-size: contain;
 	position: absolute;
-	top: 0px;
-	left: 45px;
+	top: 90px;
+	left: -55px;
+	animation: fadeinmemetext 1.6s ease-out;
 }
 
-#play {
-	height: 18px;
-	width: 18px;
-	background: url(../images/video/play.png) no-repeat center center;
+@keyframes fadeinmemetext {
+	0% {opacity: 0;}
+	50% {opacity: 0; left: 0px;}
+	100% {opacity: 1; left: -55px;}
+}
+
+#memetext2 {
+	height: 130px;
+	width: 300px;
+	background: url(../images/video/memetext2.png) no-repeat center center;
 	background-size: contain;
 	position: absolute;
-	top: 392px;
-	left: 23px;
+	top: 120px;
+	left: 150px;
+	animation: fadeinmemetext2 1.6s ease-out;
+}
+
+@keyframes fadeinmemetext2 {
+	0% {opacity: 0;}
+	50% {opacity: 0; left: 0px;}
+	100% {opacity: 1; left: 150px;}
 }
 
 #pause {
@@ -383,6 +597,40 @@ h1 {
 	position: absolute;
 	top: 392px;
 	left: 23px;
+}
+
+#text3 {
+	height: 500px;
+	width: 430px;
+	background: url(../images/video/text.png) no-repeat center center;
+	background-size: contain;
+	position: absolute;
+	z-index: 3;
+	top: 70px;
+	left: 35.4%;
+	display: none;
+	animation: fadein_text3 3.6s ease-out;
+}
+
+@keyframes fadein_text3 {
+	0% {opacity: 0; z-index: 1;}
+	75% {opacity: 0; z-index: 3;}
+	100% {opacity: 1; z-index: 3;}
+}
+
+#closevideo {
+	height: 25px;
+	width: 25px;
+	background: url(../images/chat/close.png) no-repeat center center;
+	background-size: contain;
+	z-index: 3;
+	position: absolute;
+	top: 100px;
+	left: 35.4%;
+	transform: translateX(380px);
+	display: none;
+	cursor: pointer;
+	animation: fadein_text3 3.6s ease-out;
 }
 
 
@@ -399,17 +647,17 @@ h1 {
 	background: url(../images/socialmedia/bg.png) no-repeat center center;
 	background-size: contain;
 	top: 70px;
-	left: 530px;
+	left: 36.8%;
 	position: absolute;
 	z-index: 2;
 	display: none;
-	animation: appear4 .5s linear;
+	transform-origin: right top;
+	animation: appearsocialmedia .8s ease-out;
 }
 
-@keyframes appear4 {
-	0% {height: 0; width: 0;}
-	50% {height: 250px; width: 190px;}
-	100% {height: 500px; width: 380px;}
+@keyframes appearsocialmedia {
+	from {transform: scale(0,0);}
+	to {transform: scale(1,1);}
 }
 
 #comment {
@@ -420,6 +668,12 @@ h1 {
 	position: absolute;
 	top: 435px;
 	left: 56px;
+	animation: commentappear 2s infinite ease-out;
+}
+
+@keyframes commentappear {
+	from {top: 450px; opacity: 0;}
+	to {top: 435px; opacity: 1;}
 }
 
 #like1 {
@@ -430,6 +684,14 @@ h1 {
 	position: absolute;
 	top: 418px;
 	left: 195px;
+	opacity: 0;
+	animation: likeappear 3s 1.5s ease-out;
+}
+
+@keyframes likeappear {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
 }
 
 #like2 {
@@ -440,6 +702,8 @@ h1 {
 	position: absolute;
 	top: 418px;
 	left: 195px;
+	opacity: 0;
+	animation: likeappear 3s 3.5s ease-out;
 }
 
 #like3 {
@@ -450,6 +714,42 @@ h1 {
 	position: absolute;
 	top: 418px;
 	left: 195px;
+	opacity: 0;
+	animation: likeappear 3s 5s ease-out;
+}
+
+#text4 {
+	height: 500px;
+	width: 380px;
+	background: url(../images/socialmedia/text.png) no-repeat center center;
+	background-size: contain;
+	position: absolute;
+	z-index: 3;
+	top: 70px;
+	left: 36.8%;
+	display: none;
+	animation: fadein_text4 9s ease-out;
+}
+
+@keyframes fadein_text4 {
+	0% {opacity: 0; z-index: 1;}
+	85% {opacity: 0; z-index: 3;}
+	100% {opacity: 1; z-index: 3;}
+}
+
+#closesocialmedia {
+	height: 25px;
+	width: 25px;
+	background: url(../images/chat/close.png) no-repeat center center;
+	background-size: contain;
+	z-index: 3;
+	position: absolute;
+	top: 90px;
+	left: 36.8%;
+	transform: translateX(295px);
+	display: none;
+	cursor: pointer;
+	animation: fadein_text4 9s ease-out;
 }
 
 
@@ -466,48 +766,105 @@ h1 {
 	background: url(../images/vilify/bg.png) no-repeat center center;
 	background-size: contain;
 	top: 70px;
-	left: 530px;
+	left: 36.8%;
 	position: absolute;
 	z-index: 2;
 	display: none;
-	transform-origin: 530px 530px;
-	animation: appear5 .5s linear;
+	transform-origin: right center;
+	animation: appearvilify .8s ease-out;
 }
 
-@keyframes appear5 {
-	0% {height: 0; width: 0;}
-	50% {height: 250px; width: 190px;}
-	100% {height: 500px; width: 380px;}
+@keyframes appearvilify {
+	from {transform: scale(0,0);}
+	to {transform: scale(1,1);}
 }
 
 #memeoriginal {
-	height: 80px;
-	width: 120px;
+	height: 310px;
+	width: 200px;
 	background: url(../images/vilify/meme.png) no-repeat center center;
 	background-size: contain;
 	position: absolute;
-	top: 418px;
-	left: 195px;
+	top: 100px;
+	left: 100px;
+	opacity: 0;
+	animation: memeappear 3s ease-out;
+}
+
+@keyframes memeappear {
+	0% {opacity: 0;}
+	25% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
 }
 
 #selected {
-	height: 80px;
-	width: 120px;
+	height: 310px;
+	width: 200px;
 	background: url(../images/vilify/memeselected.png) no-repeat center center;
 	background-size: contain;
 	position: absolute;
-	top: 418px;
-	left: 195px;
+	top: 100px;
+	left: 100px;
+	opacity: 0;
+	animation: memesqueezed 2.5s 1.5s ease-out;
+}
+
+@keyframes memesqueezed {
+	from {opacity: 1;}
+	to {opacity: 0;}
 }
 
 #vilified {
-	height: 80px;
-	width: 120px;
+	height: 270px;
+	width: 200px;
 	background: url(../images/vilify/vilified.png) no-repeat center center;
 	background-size: contain;
 	position: absolute;
-	top: 418px;
-	left: 195px;
+	top: 120px;
+	left: 100px;
+	opacity: 1;
+	animation: memevilified 5s ease-out;
+}
+
+@keyframes memevilified {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+#text5 {
+	height: 500px;
+	width: 380px;
+	background: url(../images/vilify/text.png) no-repeat center center;
+	background-size: contain;
+	position: absolute;
+	z-index: 3;
+	top: 70px;
+	left: 36.8%;
+	display: none;
+	animation: fadein_text5 7s ease-out;
+}
+
+@keyframes fadein_text5 {
+	0% {opacity: 0; z-index: 1;}
+	75% {opacity: 0; z-index: 3;}
+	100% {opacity: 1; z-index: 3;}
+}
+
+#closevilify {
+	height: 25px;
+	width: 25px;
+	background: url(../images/chat/close.png) no-repeat center center;
+	background-size: contain;
+	z-index: 3;
+	position: absolute;
+	top: 130px;
+	left: 36.8%;
+	transform: translateX(330px);
+	display: none;
+	cursor: pointer;
+	animation: fadein_text5 7s ease-out;
 }
 
 
@@ -524,55 +881,112 @@ h1 {
 	background: url(../images/sell/bg.png) no-repeat center center;
 	background-size: contain;
 	top: 70px;
-	left: 470px;
+	left: 32.7%;
 	position: absolute;
-	z-index: 2;
+	z-index: 3;
 	display: none;
-	animation: appear6 .5s linear;
+	transform-origin: right bottom;
+	animation: appearsell .8s ease-out;
 }
 
-@keyframes appear6 {
-	0% {height: 0; width: 0;}
-	50% {height: 250px; width: 250px;}
-	100% {height: 500px; width: 500px;}
+@keyframes appearsell {
+	from {transform: scale(0,0);}
+	to {transform: scale(1,1);}
 }
 
 #memeshirt {
-	height: 80px;
-	width: 120px;
-	background: url(../images/vilify/vilified.png) no-repeat center center;
+	height: 110px;
+	width: 110px;
+	background: url(../images/sell/memeshirt.png) no-repeat center center;
 	background-size: contain;
 	position: absolute;
-	top: 418px;
-	left: 195px;
+	top: 215px;
+	left: 105px;
+	transform-origin: center center;
+	animation: appearshirt 1.2s ease-in-out;
+}
+
+@keyframes appearshirt {
+	0% {transform: scale(0,0); opacity: 0;}
+	50% {transform: scale(0,0); opacity: 0;}
+	100% {transform: scale(1,1); opacity: 1;}
 }
 
 #bigsale {
 	height: 80px;
-	width: 120px;
-	background: url(../images/vilify/vilified.png) no-repeat center center;
+	width: 80px;
+	background: url(../images/sell/bigsale.png) no-repeat center center;
 	background-size: contain;
 	position: absolute;
-	top: 418px;
-	left: 195px;
+	top: 205px;
+	left: 330px;
+	transform-origin: center center;
+	animation: appearshirt 1.2s ease-in-out;
 }
 
 #price {
-	height: 80px;
-	width: 120px;
-	background: url(../images/vilify/vilified.png) no-repeat center center;
+	height: 75px;
+	width: 75px;
+	background: url(../images/sell/price.png) no-repeat center center;
 	background-size: contain;
 	position: absolute;
-	top: 418px;
-	left: 195px;
+	top: 215px;
+	left: 235px;
+	transform-origin: center center;
+	animation: appearshirt 1.2s ease-in-out;
 }
 
 #purchase {
-	height: 80px;
-	width: 120px;
-	background: url(../images/vilify/vilified.png) no-repeat center center;
+	height: 70px;
+	width: 70px;
+	background: url(../images/sell/purchase.png) no-repeat center center;
 	background-size: contain;
 	position: absolute;
-	top: 418px;
-	left: 195px;
+	top: 270px;
+	left: 240px;
+	z-index: 3;
+	animation: pulse 5s ease-in-out;
+}
+
+@keyframes pulse {
+	0% {transform: scale(1,1); z-index: -1; opacity: 0;}
+	25% {transform: scale(.8,.8); z-index: 3;}
+	50% {transform: scale(1,1); z-index: 3;}
+	75% {transform: scale(.8,.8); z-index: 3;}
+	100% {transform: scale(1,1); z-index: 3;}
+}
+
+#text6 {
+	height: 480px;
+	width: 425px;
+	background: url(../images/sell/text.png) no-repeat center center;
+	background-size: contain;
+	position: absolute;
+	z-index: 3;
+	top: 68px;
+	left: 32.7%;
+	transform: translateX(38px);
+	display: none;
+	animation: fadein_text6 5.5s ease-out;
+}
+
+@keyframes fadein_text6 {
+	0% {opacity: 0; z-index: 1;}
+	75% {opacity: 0; z-index: 3;}
+	100% {opacity: 1; z-index: 3;}
+}
+
+#closesell {
+	height: 25px;
+	width: 25px;
+	background: url(../images/chat/close.png) no-repeat center center;
+	background-size: contain;
+	z-index: 3;
+	position: absolute;
+	top: 180px;
+	left: 32.7%;
+	transform: translateX(420px);
+	display: none;
+	cursor: pointer;
+	animation: fadein_text6 5.5s ease-out;
 }
