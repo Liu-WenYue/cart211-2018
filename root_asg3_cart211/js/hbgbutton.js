@@ -1,8 +1,8 @@
-$(function() {
-	$('.hamburger-button').on('click', function(event){
-		event.preventDefault();
+(function() {
+  (".hamburger-button").on("click", function(event) {
+    event.preventDefault();
 
-		$(this).toggleClass('active');
-		$('.overlay').toggleClass('visible');
-	});
+    (this).toggleClass("active");
+    (".overlay").toggleClass("visible");
+  });
 });

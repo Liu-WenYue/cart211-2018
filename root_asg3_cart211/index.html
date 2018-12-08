@@ -7,14 +7,14 @@
 </head>
 
 <body>
-	<a href="#" id="hamburger-button" onclick="showScreen()">
+	<a href="#" class="hamburger-button" onclick="showScreen()">
 		<span></span>
 		<span></span>
 		<span></span>
 		<span></span>
 	</a>
 
-	<div id="overlay" onclick="showScreen()">
+	<div class="overlay">
 		<nav class="menu">
 			<ul>
 				<li><a href="#">Home</a></li>
@@ -26,7 +26,7 @@
 		</nav>
 	</div>
 
-	<section id="first">
+	<section id="canvas">
 		<div>
 			<img src="images/logo.png" id="logo">
 		</div>
@@ -42,11 +42,6 @@
 		<figure id="f6" ondrop="dropSell(event)" ondragover="allowDrop(event)"></figure>
 
 		<h1>Drag the meme onto any of the icons</h1>
-
-		<!-- <div id="large-header" class="large-header">
-		  <canvas id="demo-canvas"></canvas>
-		</div> -->
-
 	</section>
 
 	<div id="chat" class="chatmain">
@@ -117,13 +112,22 @@
 		<span id="closesell" onclick="hideSellFunction()"></span>
 	</div>
 
+	<!-- <script src="js/bg.js"></script> -->
+
 	<script>
-		var btn = document.getElementById("hamburger-button");
-		var overlay = document.getElementById("overlay");
+		var btn = document.getElementsByClassName("hamburger-button");
+		var overlay = document.getElementsByClassName("overlay");
 
 		function showScreen () {
-			btn.toggleClass = "active";
-			overlay.toggleClass = "visible";
+			// btn.toggleClass = "active";
+			// overlay.toggleClass = "visible";
+			for (var i = 0; i < btn.length; i++) {
+			  btn[i].classList.toggle("active");
+			}
+
+			for (var i = 0; i < overlay.length; i++) {
+				 overlay[i].classList.toggle("visible");
+			}
 		}
 	</script>
 
