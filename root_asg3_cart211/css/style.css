@@ -23,12 +23,15 @@ html, body {
 	top: 20px;
 	position: absolute;
 	transform-origin: center center;
-	animation: growup .5s ease-out;
+}
+
+#logo:hover {
+	animation: growup .5s linear;
 }
 
 @keyframes growup {
-	0% {transform: scale(0,0); opacity: 0;}
-	90% {transform: scale(1.1,1.1); opacity: 1;}
+	0% {transform: scale(1,1);}
+	90% {transform: scale(1.1,1.1);}
 	100% {transform: scale(1,1);}
 }
 
@@ -217,6 +220,13 @@ section figure:hover {
 	background-size: cover;
 	top: 180px;
 	left: 80px;
+	transform-origin: bottom center;
+	animation: appearicon .4s .1s ease-out;
+}
+
+@keyframes appearicon {
+	from {transform: scale(0,0); opacity: 0;}
+	to {transform: scale(1,1); opacity: 1;}
 }
 
 #f1:hover {
@@ -230,6 +240,7 @@ section figure:hover {
 	background: url(../images/fig2.png) no-repeat center center;
 	background-size: cover;
 	left: 60px;
+	animation: appearicon .4s .12s ease-out;
 }
 
 #f2:hover {
@@ -244,6 +255,7 @@ section figure:hover {
 	background-size: cover;
 	top: -240px;
 	left: -180px;
+	animation: appearicon .4s .14s ease-out;
 }
 
 #f3:hover {
@@ -258,6 +270,7 @@ section figure:hover {
 	background-size: cover;
 	top: -180px;
 	left: 95px;
+	animation: appearicon .4s .16s ease-out;
 }
 
 #f4:hover {
@@ -272,6 +285,7 @@ section figure:hover {
 	background-size: cover;
 	top: -20px;
 	left: 60px;
+	animation: appearicon .4s .18s ease-out;
 }
 
 #f5:hover {
@@ -286,6 +300,7 @@ section figure:hover {
 	background-size: cover;
 	top: 190px;
 	left: -240px;
+	animation: appearicon .4s .2s ease-out;
 }
 
 #f6:hover {
@@ -299,9 +314,16 @@ section figure:hover {
 	width: 230px;
 	height: 300px;
 	left: 50%;
-	transform: translateX(-20px);
+	transform-origin: bottom center;
 	border-radius: 0;
 	z-index: 2;
+	transform: translateX(-20px);
+	animation: appearmemeanim 1s ease-out;
+}
+
+@keyframes appearmemeanim {
+	from {opacity: 0;}
+	to {opacity: 1;}
 }
 
 h1 {
