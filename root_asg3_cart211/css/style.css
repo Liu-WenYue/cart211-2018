@@ -1,5 +1,7 @@
 /* CCS Document */
 @import url('https://fonts.googleapis.com/css?family=Chakra+Petch:600');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:500');
 
 * {
 	margin: 0 auto;
@@ -67,7 +69,7 @@ html, body {
 }
 
 .hamburger-button.active span {
-  background-color: #333333;
+  background-color: #fff;
 }
 
 .hamburger-button.active span:nth-child(1),
@@ -87,12 +89,12 @@ html, body {
 .overlay {
   position: fixed;
 	z-index: 101;
-  background: #fff;
+  background: #333333;
   top: 0;
   left: 0;
   width: 100%;
   height: 0%;
-  opacity: 0.9;
+  opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s, height 0.3s;
   display: flex;
@@ -128,6 +130,16 @@ nav ul li a:hover {
   opacity: 1;
 }
 
+nav ul li p {
+	color: #fff;
+	padding: 0px 170px 80px 170px;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 50px;
+	transition: opacity 0.2s ease;
+}
+
 /* 2. Add the animation. */
 @keyframes fadeInLeft {
   0% {
@@ -142,7 +154,7 @@ nav ul li a:hover {
 
 /* 3. Style the visible overlay. */
 .overlay.visible {
-  opacity: 0.85;
+  opacity: 1;
   visibility: visible;
   height: 100%;
 }
