@@ -1,6 +1,7 @@
 /* CCS Document */
 @import url('https://fonts.googleapis.com/css?family=Chakra+Petch:600');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:500');
 
 * {
@@ -104,7 +105,7 @@ html, body {
 
 nav {
   font-size: 2rem;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
 }
 
@@ -116,7 +117,7 @@ nav ul {
 
 nav ul li {
   opacity: 0;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 nav ul li a {
@@ -195,6 +196,7 @@ nav ul li p {
 	flex-flow: row wrap;
 	justify-content: space-around;
 	align-items: center;
+	z-index: 105;
 }
 
 section figure {
